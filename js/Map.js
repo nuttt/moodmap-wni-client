@@ -1,5 +1,6 @@
 /**
  * Create mapbox map and bind to html
+ * @constructor
  * @param {string} mapId      id of the dom which map will be rendered
  * @param {string} mapboxRef  map id from Mapbox
  * @param {Object} mapOptions map option according to Mapbox Javascript API
