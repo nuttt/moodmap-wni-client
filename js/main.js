@@ -52,7 +52,7 @@ function main(){
 
     $("#map-error").hide();
 
-    // After 10 seconds, call drawMap every 10 seconds
+    // After 5 seconds, call drawMap every 10 seconds
     window.setTimeout(function(){
 
         async.forever(function(nextCallback){
@@ -61,6 +61,8 @@ function main(){
 
                 if(error) {
                     raiseMapAlert("Failed connecting to server.");
+                } else {
+                    fadeOutLandingPage();
                 }
 
                 window.setTimeout(function(){
@@ -71,8 +73,12 @@ function main(){
 
         });
 
-    },10000);
+    },5000);
     
+}
+
+function fadeOutLandingPage(){
+    $("#landing-page").fadeOut();
 }
 
 function initializeDataGateway(){

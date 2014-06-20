@@ -8,6 +8,48 @@ body {
   position: relative;
   font-family: 'Lato', sans-serif;
 }
+
+
+#landing-page {
+    background-color: rgba(255,255,255,0.85);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+#landing-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-image: url("../img/moodmap-icon.png");
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    z-index: 101;
+    width: 328px;
+    height: 401px;
+    margin: -200px 0 0 -164px;
+}
+
+#landing-load {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    background-image: url("../img/loading.gif");
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    z-index: 102;
+    width: 64px;
+    height: 22px;
+    margin: 0 0 0 -32px;
+}
+
+#landing-title-wrapper {
+    width: 30%;
+    margin: 25% auto;
+    text-align: center;
+}
+
 #map {
   height: 100%;
   width: 100%;
