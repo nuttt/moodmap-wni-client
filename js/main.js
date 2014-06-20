@@ -1,8 +1,3 @@
-
-/**
- * Load required javascript
- */
-
 var MAPBOX_REF = 'nuttt.ifb5eich';
 var DATA_POINT_URL = 'http://localhost:8080/location/{level}';
 var POINT_INFO_URL = 'http://localhost:8080/info/{level}/{id}';
@@ -26,10 +21,6 @@ yepnope({
     load: jsLoad,
     complete: main      // when load complete, run main function
 });
-
-/**
- * Main script
- */
 
 function main(){
 
@@ -192,10 +183,6 @@ function closePane() {
   $("#info-wrapper").removeClass("open-pane");
 } 
 
-
-/**
- * Lightbox by Vee
- */
 
 function initLightBox() {
     $('#top-photos').on('click', '.lightbox_trigger', function(e) {
