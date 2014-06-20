@@ -3,7 +3,7 @@
  * Load required javascript
  */
 
-var MAPBOX_REF = '';
+var MAPBOX_REF = 'nuttt.ifb5eich';
 var DATA_POINT_URL = 'http://localhost:8080/location/{level}';
 var POINT_INFO_URL = 'http://localhost:8080/info/{level}/{id}';
 var REPORT_INFO_URL = 'http://localhost:8080/report/{id}';
