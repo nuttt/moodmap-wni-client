@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Mood Map of Sunnycomb &mdash; Weathernews</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/bootstrap-lightbox.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.css' rel='stylesheet' />
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div id="map"></div>
+    <div class="alert alert-danger" id="map-error">Cannot connect to server!</div>
+    <div id="info-wrapper">
+      <div id="info">
+        <h1 id="city-name">Mihama, Chiba</h1>
+        <button type="button" class="btn btn-default" id="close-pane-btn"><span class="glyphicon glyphicon-chevron-right" onclick="closePane()"></span></button>
+        <div class="info-padding">
+          <div class="row" id="moods">
+            <div class="col-md-8">
+              <div class="circle circle-large circle-mood-1" id="mood1">
+                <div>
+                  <div class="mood-icon mood-icon-5"></div>
+                  <h3>25<span>%</span></h3>
+                  <p>Super Happy</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="circle circle-small" id="mood2">
+                <div>
+                  <div class="mood-icon mood-icon-4"></div>
+                  <h3>15<span>%</span></h3>
+                  <p>Happy</p>
+                </div>
+              </div>
+              <div class="circle circle-small" id="mood3">
+                <div>
+                  <div class="mood-icon mood-icon-3"></div>
+                  <h3>10<span>%</span></h3>
+                  <p>Meh</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2>Top Photos</h2>
+        <div class="photo-pane" id="top-photos">
+          <img src="http://www.lorempixel.com/150/150/cats/1" alt="" class="img-rounded">
+          <img src="http://www.lorempixel.com/150/150/cats/2" alt="" class="img-rounded">
+          <img src="http://www.lorempixel.com/150/150/cats/3" alt="" class="img-rounded">
+          <img src="http://www.lorempixel.com/150/150/cats/4" alt="" class="img-rounded">
+          <img src="http://www.lorempixel.com/150/150/cats/5" alt="" class="img-rounded">
+        </div>
+        <!--
+          <h2>Trending</h2>
+          <div class="info-padding">
+              <ul class="trending">
+                  <li>Test</li>
+              </ul>
+          </div>
+          -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.js'></script>
+    <script src="js/yepnope.1.5.4-min.js"></script>
+    <script src="js/main.js"></script>
+    
+  </body>
+</html>

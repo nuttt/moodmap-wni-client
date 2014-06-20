@@ -1,0 +1,382 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300);
+
+html,body {
+  height: 100%;
+}
+body {
+  position: relative;
+  font-family: 'Lato', sans-serif;
+}
+#map {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#map-error {
+    position: absolute;
+    top: 5%;
+    width: 30%;
+    height: 50px;
+    left: 35%;
+    z-index: 9999;
+}
+
+
+#info-wrapper{
+  float: right;
+  height: 100%;
+  position: relative;
+  right: -30%;
+  z-index: 2;
+  width: 30%;
+  background-color: rgba(255, 255, 255, 0.9);
+    
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+#info-wrapper.open-pane {
+  right: -0px;
+}
+
+#close-pane-btn {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-color: #3498DB;
+    color: #3498DB;
+    background: none;
+}
+
+#info {
+  color: #3498DB;
+  font-weight: 300;
+}
+
+#info h1 , #info h2{
+    font-weight: 300;
+    padding: 0 15px;
+}
+
+#moods {
+  margin-top: 25px;
+}
+
+.circle {
+    width:100%;
+    font-family: 'Oswald', sans-serif;
+    position: relative;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.circle:hover {
+    -moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
+.circle:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height:0;
+    padding-bottom: 100%;
+    -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;   
+    
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.circle-mood-0:after {
+    background: #67809F; 
+}
+
+.circle-mood-1:after {
+    background: #f22613; 
+}
+
+.circle-mood-2:after {
+    background: #F9BF3B; 
+}
+
+.circle-mood-3:after {
+    background: #22A7F0; 
+}
+
+.circle-mood-4:after {
+    background: #2ECC71; 
+}
+
+.circle-mood-5:after {
+    background: #ed5ba1; 
+}
+
+/*.circle:hover:after {
+    background: #19B5FE;
+}*/
+
+.circle div {
+    float:left;
+    width:100%;
+    padding-top:12%;
+    line-height:1em;
+    margin-top:-0.5em;
+    text-align:center;
+    color:white;
+}
+
+
+.circle-small {
+  margin-bottom: 10px;
+}
+
+
+
+
+.circle .mood-icon {
+    position: absolute;
+    z-index: 3;
+    right: 25%;
+    display: block;
+    
+    width: 50%;
+    height: 50%;
+    
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.circle-large .mood-icon {
+    top: 15%;
+}
+
+.circle-small .mood-icon {
+    top: 19%;
+}
+
+.circle .mood-icon {
+    opacity: 1;
+}
+
+.circle:hover .mood-icon {
+    opacity: 0;
+}
+
+.circle .mood-icon-5 {
+    background-image: url("../img/mood-5.png");
+}
+
+.circle .mood-icon-4 {
+    background-image: url("../img/mood-4.png");
+}
+
+.circle .mood-icon-3 {
+    background-image: url("../img/mood-3.png");
+}
+
+.circle .mood-icon-2 {
+    background-image: url("../img/mood-2.png");
+}
+
+.circle .mood-icon-1 {
+    background-image: url("../img/mood-1.png");
+}
+
+.circle h3 {
+    position: absolute;
+    z-index: 3;
+    
+    width: 100%;
+    text-align: center;
+    
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.circle h3 {
+    opacity: 0;
+}
+
+.circle:hover h3 {
+    opacity: 1;
+}
+
+.circle p {
+    position: absolute;
+    z-index: 3;
+    
+    text-align: center;
+    width: 100%;
+}
+
+
+
+.circle-large h3 {
+    top: 5%;
+    right: -3%;
+    font-size: 8.5em;
+    font-weight: 400;
+}
+
+
+
+.circle-large h3 span {
+  font-size: 0.4em;
+}
+
+.circle-large p {
+  font-weight: 300;
+  font-size: 3.0em;
+    top: 72%;
+}
+
+
+.circle-small h3 {
+    top: 5%;
+    right: -3%;
+    font-size: 3em;
+    font-weight: 400;
+}
+
+.circle-small h3 span {
+    font-size: 0.4em;
+}
+
+.circle-small p {
+    font-weight: 300;
+    font-size: 1.4em;
+    top: 70%;
+}
+.info-padding {
+    padding: 0 15px;
+}
+
+.photo-pane {
+    height: 165px;
+    width: 100%;
+    /*background-color: rgba(236, 240, 241, 0.7);*/
+    overflow-y: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 25px 0 25px 0;
+}
+
+.photo-pane img {
+    margin: 0px 15px;
+    display: inline-block;
+}
+
+.photo-pane img:hover {
+    -moz-transform: scale(1.07);
+    -webkit-transform: scale(1.07);
+    -o-transform: scale(1.07);
+    -ms-transform: scale(1.07);
+    transform: scale(1.07);
+    
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -ms-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    transition: all 0.1s ease;
+}
+
+#lightbox {
+    position:fixed; /* keeps the lightbox window in the current viewport */
+    top:0; 
+    left:0; 
+    width:100%; 
+    height:100%;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    padding: 5%;
+    z-index: 9999;
+    background:rgba(0,0,0,0.5); 
+    text-align:center;
+    cursor: pointer;
+}
+
+#lightbox .inner {
+   position: relative;
+   display: inline-block;
+}
+
+#lightbox .inner .lightbox-span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    padding: 5px 10px;
+    background-color: rgba(0,0,0,0.8);
+    color: #fff;
+    text-align: left;
+    display: block;
+}
+#lightbox img {
+    box-shadow:0 0 25px #111;
+    -webkit-box-shadow:0 0 25px #111;
+    -moz-box-shadow:0 0 25px #111;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.mood-small {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin: 0 5px 0 0;
+    position: relative;
+    top: 4px ;
+}
+
+.mood-small-1 {
+    background-image: url("../img/mood-1.png");
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.mood-small-2 {
+    background-image: url("../img/mood-2.png");
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.mood-small-3 {
+    background-image: url("../img/mood-3.png");
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.mood-small-4 {
+    background-image: url("../img/mood-4.png");
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.mood-small-5 {
+    background-image: url("../img/mood-5.png");
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
